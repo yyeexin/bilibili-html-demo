@@ -2,4 +2,4 @@
 
 ### Login 预览地址
 
-https://yyeexin.github.io/html-demo-login/
+https://yyeexin.github.io/bilibili-html-demo/
