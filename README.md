@@ -15,3 +15,7 @@ Loading.html
 ### 3.图片 3D 分层悬浮效果
 
 LayeredImage.html
+
+### 4.SearchBox
+
+SearchBox.html
