@@ -23,3 +23,7 @@ SearchBox.html
 ### 5.社交媒体按钮
 
 SocialMediaButtons.html
+
+### 6.悬浮照片效果
+
+FloatPhoto.html
