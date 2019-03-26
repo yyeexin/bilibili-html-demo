@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
+		<style>
+			body {
+				padding: 0;
+				margin: 0;
+			}
+			.middle {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.btn {
+				display: inline-block;
+				width: 90px;
+				height: 90px;
+				background: #f1f1f1;
+				margin: 10px;
+				border-radius: 30%;
+				box-shadow: 0 5px 15px -5px #00000070;
+				color: #3498db;
+				overflow: hidden;
+				position: relative;
+				text-align: center;
+			}
+			.btn i {
+				line-height: 90px;
+				font-size: 26px;
+				transition: 0.2s linear;
+			}
+			.btn:hover i {
+				transform: scale(1.3);
+				color: #f1f1f1;
+			}
+			.btn::before {
+				content: '';
+				position: absolute;
+				width: 120%;
+				height: 120%;
+				background: #3498db;
+				transform: rotate(45deg);
+				left: -110%;
+				top: 90%;
+			}
+			.btn:hover::before {
+				animation: flash 0.7s 1;
+				top: -10%;
+				left: -10%;
+			}
+			@keyframes flash {
+				0% {
+					left: -100%;
+					top: 90%;
+				}
+				50% {
+					left: 10%;
+					top: -30%;
+				}
+				100% {
+					left: -10%;
+					top: -10%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="middle">
+			<a class="btn" href="https://github.com/yyeexin">
+				<i class="fab fa-github"></i>
+			</a>
+			<a class="btn" href="https://weibo.com/u/3481962337?topnav=1&wvr=6&topsug=1">
+				<i class="fab fa-weibo"></i>
+			</a>
+			<a class="btn" href="#">
+				<i class="fab fa-weixin"></i>
+			</a>
+			<a class="btn" href="#">
+				<i class="fab fa-qq"></i>
+			</a>
+
+			<a class="btn" href="#">
+				<i class="fab fa-twitch"></i>
+			</a>
+		</div>
+	</body>
+</html>
