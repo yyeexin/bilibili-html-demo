@@ -1,0 +1,18 @@
+{
+	"search.followSymlinks": false,
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 120,
+	"javascript.preferences.quoteStyle": "single",
+	"javascript.updateImportsOnFileMove.enabled": "never",
+	"vetur.format.options.tabSize": 4,
+	"vetur.format.options.useTabs": true,
+	"vetur.format.defaultFormatter.js": "vscode-typescript",
+	"vetur.format.defaultFormatter.scss": "none",
+	"prettier.singleQuote": true,
+	"prettier.semi": false,
+	"prettier.jsxBracketSameLine": true,
+	"prettier.printWidth": 120,
+	"prettier.jsxSingleQuote": true,
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true
+}
