@@ -12,140 +12,46 @@
 			body {
 				margin: 0;
 				padding: 0;
-				background: #333;
+				background: #eee;
+				display: flex;
+				justify-content: center;
 			}
-			.nav {
-				width: 100%;
-				height: 80px;
+			.side-nav {
+				width: 90%;
+				height: 60px;
+				background: #888888;
+				border-radius: 0 0 15px 15px;
+				display: flex;
+				justify-content: space-around;
+				align-items: stretch;
+				transition: 0.4s;
 			}
-			.nav a {
-				color: white;
-				margin-left: 20px;
+			.btn {
+				flex-grow: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
-			.login-box {
-				position: absolute;
-				top: 0;
-				left: -100%;
-				width: 100%;
-				height: 100vh; /* vh 视口高度 viewport height 百分比单位*/
-				background-image: linear-gradient(
-					45deg,
-					#9fbaa8,
-					#31354c
-				); /*设置颜色渐变 方向(0deg垂直向上) 起点颜色 终点颜色*/
-				transition: 0.4s; /*过度效果  property duration timing-function delay 默认属性:all 0 ease 0*/
+			a {
+				color: #82ccdd;
+				text-decoration: none;
+				font-size: 16px;
+				transition: 0.4s;
 			}
-			.login-form {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%); /*定义 2D 转换8 */
-				color: white;
-				text-align: center;
-			}
-			.login-form h1 {
-				font-weight: 400;
-				margin-top: 0;
-			}
-			.txtb {
-				display: block;
-				box-sizing: border-box;
-				width: 240px;
-				background: #ffffff28;
-				border: 1px solid white;
-				padding: 10px 20px;
-				color: white;
-				outline: none;
-				margin: 10px 0;
-				border-radius: 6px;
-				text-align: center;
-			}
-			.login-btn {
-				width: 240px;
-				background: #2c3e50;
-				border: 0;
-				color: white;
-				padding: 10px;
-				border-radius: 6px;
-				cursor: pointer;
-			}
-			.hide-login-btn {
-				color: #000;
-				position: absolute;
-				top: 40px;
-				right: 40px;
-				cursor: pointer;
-				font-size: 30px;
-				opacity: 0.7;
-				transform: rotate(45deg); /*定义 2D 转换8 */
-			}
-			.show-login-btn {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				color: white;
-				border: 2px solid;
-				padding: 10px;
-				cursor: pointer;
-			}
-			.showed {
-				left: 0;
+			a:hover {
+				font-size: 20px;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="nav">
-			<a href="./Loading1.html">加载Loading效果</a>
-			<a href="./LayeredImage.html">分层图片</a>
-			<a href="./SearchBox.html">搜索框</a>
-			<a href="./SocialMediaButtons.html">社交按钮</a>
-			<a href="./FloatPhoto.html">图片悬浮效果</a>
+		<div class="side-nav">
+			<div class="btn"><a href="./src/Login.html">登录页</a></div>
+			<div class="btn"><a href="./src/Loading1.html">加载效果</a></div>
+			<div class="btn"><a href="./src/LayeredImage.html">分层图片</a></div>
+			<div class="btn"><a href="./src/SearchBox.html">搜索框</a></div>
+			<div class="btn"><a href="./src/SocialMediaButtons.html">社交按钮</a></div>
+			<div class="btn"><a href="./src/FloatPhoto.html">图片悬浮效果</a></div>
+			<div class="btn"><a href="./src/FlexLayout.html">自适应布局导航</a></div>
 		</div>
-		<div class="show-login-btn">
-			-> Show Login Form
-		</div>
-
-		<div class="login-box">
-			<div class="hide-login-btn">
-				+
-			</div>
-			<form action="index.html" method="POST" class="login-form">
-				<h1>Welcome</h1>
-				<input class="txtb" type="text" name="" placeholder="Username" />
-				<input class="txtb" type="password" name="" placeholder="Password" />
-				<input class="login-btn" type="submit" name="" value="Login" disabled />
-			</form>
-		</div>
-		<script type="text/javascript">
-			function hasClass(element, clssname) {
-				return element.className.match(new RegExp('(\\s|^)' + clssname + '(\\s|$)'))
-			}
-			function addClass(element, clssname) {
-				if (!this.hasClass(element, clssname)) element.className += ' ' + clssname
-			}
-			function removeClass(element, clssname) {
-				if (hasClass(element, clssname)) {
-					var reg = new RegExp('(\\s|^)' + clssname + '(\\s|$)')
-					element.className = element.className.replace(reg, ' ')
-				}
-			}
-			function toggleClass(element, clssname) {
-				if (hasClass(element, clssname)) {
-					removeClass(element, clssname)
-				} else {
-					addClass(element, clssname)
-				}
-			}
-			var loginBox = document.getElementsByClassName('login-box')
-			var showBtn = document.getElementsByClassName('show-login-btn')
-			var hideBtn = document.getElementsByClassName('hide-login-btn')
-			showBtn[0].addEventListener('click', function() {
-				toggleClass(loginBox[0], 'showed')
-			})
-			hideBtn[0].addEventListener('click', function() {
-				toggleClass(loginBox[0], 'showed')
-			})
-		</script>
 	</body>
 </html>
