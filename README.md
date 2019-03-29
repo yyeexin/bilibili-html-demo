@@ -1,12 +1,12 @@
-# bilibili-html-demo  B站学习demo
+# B站学习demo
 
-## Login 预览地址
+## 首页
 
 https://yyeexin.github.io/bilibili-html-demo/
 
 ### 1.登录页
 
-index.html
+Login.html
 
 ### 2.Loading 效果
 
@@ -27,3 +27,7 @@ SocialMediaButtons.html
 ### 6.悬浮照片效果
 
 FloatPhoto.html
+
+### 7.自适应布局导航
+
+FlexLayout.html
