@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>自适应评论列表</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script src="../lib/OwlCarousel/owl.carousel.min.js"></script>
+		<link rel="stylesheet" href="../lib/OwlCarousel/assets/owl.carousel.min.css" />
+		<link rel="stylesheet" href="../lib//OwlCarousel/assets/owl.theme.default.min.css" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: 'mont serral', sans-serif;
+				box-sizing: border-box;
+			}
+			.testimonia-section {
+				background-color: #3498db;
+				padding: 40px 0;
+				height: 100vh;
+			}
+			.inner-width {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 20px;
+			}
+			.testimonia-section h1 {
+				text-align: center;
+				color: #333;
+				font-size: 24px;
+			}
+			.border {
+				width: 100px;
+				height: 3px;
+				background-color: #333;
+				margin: 40px auto;
+			}
+			.testimonial {
+				background-color: #f1f1f1;
+				padding: 40px;
+				overflow: hidden;
+				border-radius: 8px;
+				cursor: pointer;
+			}
+			.test-info {
+				display: flex;
+				height: 60px;
+				align-items: center;
+			}
+			.test-pic {
+				width: 50px !important;
+				border-radius: 50%;
+				margin-right: 15px;
+			}
+			.test-name {
+				font-size: 12px;
+				color: #333;
+			}
+			.test-name span {
+				display: block;
+				font-size: 14px;
+				font-weight: 700;
+				color: #3498db;
+			}
+			.testimonial p {
+				font-size: 12px;
+				line-height: 22px;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="testimonia-section">
+			<div class="inner-width">
+				<h1>What Client Says</h1>
+				<div class="border"></div>
+				<div class="sliders owl-carousel">
+					<div class="testimonial">
+						<div class="test-info">
+							<img class="test-pic" src="../images/头像1.jpg" alt="" />
+							<div class="test-name">
+								<span>Client1</span>
+								@Client1
+							</div>
+						</div>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sapiente dolorem qui natus
+							quasi ducimus maiores quae placeat pariatur tempora, earum quibusdam eos mollitia quod hic
+							maxime in omnis atque.
+						</p>
+					</div>
+
+					<div class="testimonial">
+						<div class="test-info">
+							<img class="test-pic" src="../images/头像2.jpg" alt="" />
+							<div class="test-name">
+								<span>Client2</span>
+								@Client2
+							</div>
+						</div>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sapiente dolorem qui natus
+							quasi ducimus maiores quae placeat pariatur tempora, earum quibusdam eos mollitia quod hic
+							maxime in omnis atque.
+						</p>
+					</div>
+
+					<div class="testimonial">
+						<div class="test-info">
+							<img class="test-pic" src="../images/头像3.jpg" alt="" />
+							<div class="test-name">
+								<span>Client3</span>
+								@Client3
+							</div>
+						</div>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sapiente dolorem qui natus
+							quasi ducimus maiores quae placeat pariatur tempora, earum quibusdam eos mollitia quod hic
+							maxime in omnis atque.
+						</p>
+					</div>
+					<div class="testimonial">
+						<div class="test-info">
+							<img class="test-pic" src="../images/头像4.jpg" alt="" />
+							<div class="test-name">
+								<span>Client4</span>
+								@Client4
+							</div>
+						</div>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nobis non, veritatis
+							inventore placeat voluptatum ßrepudiandae doloribus placeat voluptatum similique ipsam
+							itaque iure aperiam delectus beatae et.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$('.owl-carousel').owlCarousel({
+				margin: 10,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 1
+					},
+					680: {
+						items: 2
+					},
+					960: {
+						items: 3
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
