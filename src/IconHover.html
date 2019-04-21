@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			section {
+				height: 25vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.s1 {
+				background: #3498db;
+			}
+			.s2 {
+				background: #e74c3c;
+			}
+			.s3 {
+				background: #2ecc71;
+			}
+			.s4 {
+				background: #34495e;
+			}
+			.iconbtn {
+				width: 80px;
+				height: 80px;
+				text-decoration: none;
+				margin: 20px;
+				position: relative;
+				font-size: 30px;
+				border-radius: 50%;
+			}
+			.iconbtn::before {
+				position: absolute;
+				z-index: 1;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.iconbtn::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				box-sizing: border-box;
+				border-radius: 50%;
+				z-index: 0;
+			}
+			.s1 .iconbtn,
+			.s2 .iconbtn {
+				color: #fff;
+			}
+			.s1 .iconbtn::after {
+				border: 4px dashed;
+			}
+			.s1 .iconbtn:hover::after {
+				animation: ro 7s linear infinite;
+			}
+
+			.s2 .iconbtn {
+				border: 4px solid;
+			}
+			.s2 .iconbtn:hover {
+				animation: ro 2s linear infinite;
+			}
+
+			.s3 .iconbtn {
+				border: 4px solid #fff;
+				color: #2ecc71;
+			}
+			.s3 .iconbtn::after {
+				background: #fff;
+				transition: 0.2s;
+			}
+			.s3 .iconbtn:hover::after {
+				transform: scale(0.9);
+			}
+
+			.s4 .iconbtn {
+				border: 4px solid #fff;
+				color: #34495e;
+			}
+			.s4 .iconbtn::after {
+				background: #fff;
+				transition: 0.4s;
+			}
+			.s4 .iconbtn:hover::after {
+				transform: scale(1.3);
+				opacity: 0;
+			}
+			.s4 .iconbtn:hover {
+				color: #fff;
+			}
+
+			@keyframes ro {
+				0% {
+					transform: rotate(0);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section class="s1">
+			<a href="#" class="iconbtn fas fa-laptop"></a>
+			<a href="#" class="iconbtn fas fa-mobile-alt"></a>
+			<a href="#" class="iconbtn fas fa-cog"></a>
+			<a href="#" class="iconbtn fas fa-link"></a>
+		</section>
+		<section class="s2">
+			<a href="#" class="iconbtn fas fa-laptop"></a>
+			<a href="#" class="iconbtn fas fa-mobile-alt"></a>
+			<a href="#" class="iconbtn fas fa-cog"></a>
+			<a href="#" class="iconbtn fas fa-link"></a>
+		</section>
+		<section class="s3">
+			<a href="#" class="iconbtn fas fa-laptop"></a>
+			<a href="#" class="iconbtn fas fa-mobile-alt"></a>
+			<a href="#" class="iconbtn fas fa-cog"></a>
+			<a href="#" class="iconbtn fas fa-link"></a>
+		</section>
+		<section class="s4">
+			<a href="#" class="iconbtn fas fa-laptop"></a>
+			<a href="#" class="iconbtn fas fa-mobile-alt"></a>
+			<a href="#" class="iconbtn fas fa-cog"></a>
+			<a href="#" class="iconbtn fas fa-link"></a>
+		</section>
+	</body>
+</html>

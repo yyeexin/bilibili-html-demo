@@ -4,6 +4,15 @@
 
 https://yyeexin.github.io/bilibili-html-demo/
 
+## 可能需要使用的资源 CDN
+
+```
+<!-- font-awesome -->
+<link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
+```
+
+## 目录
+
 | 效果名               | 链接                                                                                                      |
 | -------------------- | --------------------------------------------------------------------------------------------------------- |
 | 登录页               | [Login.html](https://yyeexin.github.io/bilibili-html-demo/src/Login.html)                                 |
@@ -19,3 +28,4 @@ https://yyeexin.github.io/bilibili-html-demo/
 | 登录页 1             | [Login1.html](https://yyeexin.github.io/bilibili-html-demo/src/Login1.html)                               |
 | 自适应滑动评论列表   | [Testimonia.html](https://yyeexin.github.io/bilibili-html-demo/src/Testimonia.html)                       |
 | 登录页 2             | [Login2.html](https://yyeexin.github.io/bilibili-html-demo/src/Login2.html)                               |
+| 4 种图标 hover 效果  | [IconHover.html](https://yyeexin.github.io/bilibili-html-demo/src/IconHover.html)                         |
