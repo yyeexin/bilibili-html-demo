@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
+		<title>ReverseCard</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+				font-family: 'montserrat';
+			}
+			body {
+				background: #333;
+			}
+			.middle {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.card {
+				cursor: pointer;
+				width: 320px;
+				height: 480px;
+			}
+			.front,
+			.back {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				backface-visibility: hidden;
+				position: absolute;
+				transition: transform 0.6s linear;
+			}
+			.front img {
+				height: 100%;
+			}
+			.front {
+				transform: perspective(600px) rotateY(0deg);
+			}
+			.back {
+				background: #f1f1f1;
+				transform: perspective(600px) rotateY(180deg);
+			}
+			.back-content {
+				color: #2c3e50;
+				text-align: center;
+				width: 100%;
+			}
+			.sm {
+				margin: 20px 0;
+			}
+			.sm a {
+				display: inline-flex;
+				width: 40px;
+				height: 40px;
+				justify-content: center;
+				align-items: center;
+				color: #2c3e50;
+				font-size: 18px;
+				transition: 0.4s;
+				border-radius: 50%;
+			}
+			.sm a:hover {
+				background: #2c3e50;
+				color: white;
+			}
+			.card:hover > .front {
+				transform: perspective(600px) rotateY(-180deg);
+			}
+			.card:hover > .back {
+				transform: perspective(600px) rotateY(0deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="card middle">
+			<div class="front">
+				<img src="../images/头像1.jpg" alt="" />
+			</div>
+			<div class="back">
+				<div class="back-content middle">
+					<h2>yyeexin</h2>
+					<span>Web Devloper</span>
+					<div class="sm">
+						<a href="https://weibo.com/u/3481962337"><i class="fab fa-weibo"></i></a>
+						<a href="https://public-1256942570.cos.ap-chengdu.myqcloud.com/qrcode.jpg"
+							><i class="fab fa-weixin"></i
+						></a>
+						<a href="https://public-1256942570.cos.ap-chengdu.myqcloud.com/qq_qccode.jpg"
+							><i class="fab fa-qq"></i
+						></a>
+						<a href="https://space.bilibili.com/11866444"><i class="fab fa-twitch"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
