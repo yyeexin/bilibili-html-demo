@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>FoldMenu</title>
+		<link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: sans-serif;
+				list-style: none;
+				text-decoration: none;
+			}
+			.middle {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.menu {
+				width: 300px;
+				border-radius: 8px;
+				overflow: hidden;
+			}
+			.item {
+				/* border-top: 1px solid #2980b9; */
+				overflow: hidden;
+			}
+			.btn {
+				display: block;
+				padding: 16px 20px;
+				background: #3498db;
+				color: white;
+				position: relative;
+			}
+			.btn::before {
+				content: '';
+				position: absolute;
+				width: 14px;
+				height: 14px;
+				background: #3498db;
+				left: 20px;
+				bottom: -7px;
+				transform: rotate(45deg);
+			}
+			.btn i {
+				margin-right: 10px;
+			}
+			.smenu {
+				background: #333;
+				overflow: hidden;
+				transition: max-height 0.3s;
+				max-height: 0;
+			}
+			.smenu a {
+				display: block;
+				padding: 16px 26px;
+				color: white;
+				font-size: 14px;
+				margin: 4px 0;
+				position: relative;
+			}
+			.smenu a:before {
+				content: '';
+				position: absolute;
+				width: 6px;
+				height: 100%;
+				background: #3498db;
+				left: 0;
+				top: 0;
+				transition: 0.3s;
+				opacity: 0;
+			}
+			.smenu a:hover::before {
+				opacity: 1;
+			}
+			.item:target .smenu {
+				max-height: 10em;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="middle">
+			<div class="menu">
+				<li class="item" id="Profile">
+					<a href="#Profile" class="btn"><i class="far fa-user"></i>Profile</a>
+					<div class="smenu">
+						<a href="">Posts</a>
+						<a href="">Picture</a>
+					</div>
+				</li>
+				<li class="item" id="Message">
+					<a href="#Message" class="btn"><i class="far fa-envelope"></i>Message</a>
+					<div class="smenu">
+						<a href="">new</a>
+						<a href="">Sent</a>
+						<a href="">Spam</a>
+					</div>
+				</li>
+				<li class="item" id="Setting">
+					<a href="#Setting" class="btn"><i class="fas fa-cog"></i>Setting</a>
+					<div class="smenu">
+						<a href="">Password</a>
+						<a href="">Language</a>
+					</div>
+				</li>
+				<li class="item" id="Login">
+					<a href="#Login" class="btn"><i class="fas fa-sign-out-alt"></i>Login</a>
+					<div class="smenu">
+						<a href="">Login In</a>
+						<a href="">Login Out</a>
+					</div>
+				</li>
+			</div>
+		</div>
+	</body>
+</html>
