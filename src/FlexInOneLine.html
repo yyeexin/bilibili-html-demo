@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>一行代码实现响应式布局</title>
+		<style>
+			div {
+				min-height: 100px;
+			}
+			.container {
+				display: grid;
+				grid-gap: 5px;
+				grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+				grid-template-rows: repeat(2, 100px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div style="background-color: rosybrown">1</div>
+			<div style="background-color: rebeccapurple">2</div>
+			<div style="background-color: coral">3</div>
+			<div style="background-color: goldenrod">4</div>
+			<div style="background-color: hotpink">5</div>
+			<div style="background-color: seagreen">6</div>
+		</div>
+	</body>
+</html>
