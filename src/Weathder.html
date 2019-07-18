@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>单标签！纯CSS实现动态晴阴雨雪</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="weather sunny"></div>
+			<div class="weather cloudy"></div>
+			<div class="weather rainy"></div>
+			<div class="weather snowy"></div>
+		</div>
+	</body>
+	<style>
+		.container {
+			height: 80vh;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.weather {
+			position: relative;
+			display: inline-block;
+			width: 180px;
+			height: 240px;
+			background: #23b7e5;
+			border-radius: 8px;
+		}
+		.sunny:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 60px;
+			height: 60px;
+			background: #f6d963;
+			border-radius: 50%;
+			box-shadow: 0 0 20px #ff0;
+			z-index: 2;
+		}
+		.sunny:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -45px 0 0 -45px;
+			width: 90px;
+			height: 90px;
+			background: #ffeb3b;
+			clip-path: polygon(
+				50% 0%,
+				65.43% 25%,
+				93.3% 25%,
+				78.87% 50%,
+				93.3% 75%,
+				64.43% 75%,
+				50% 100%,
+				35.57% 75%,
+				6.7% 75%,
+				21.13% 50%,
+				6.7% 25%,
+				35.57% 25%
+			);
+			z-index: 1;
+			animation: sunScale 2s linear infinite;
+		}
+		@keyframes sunScale {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.1);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+		.cloudy:before,
+		.rainy:before,
+		.snowy:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 25%;
+			transform: translate(-50%, -50%);
+			width: 36px;
+			height: 36px;
+			background: #fff;
+			border-radius: 50%;
+			box-shadow: #fff 22px -15px 0 6px, #fff 57px -6px 0 2px, #fff 87px 4px 0 -4px, #fff 33px 6px 0 6px,
+				#fff 61px 6px 0 2px, #ccc 29px -23px 0 6px, #ccc 64px -14px 0 2px, #ccc 94px -4px 0 -4px;
+			z-index: 2;
+		}
+		.cloudy:before {
+			animation: cloudMove 2s linear infinite;
+		}
+		@keyframes cloudMove {
+			0% {
+				transform: translate(-50%, -50%);
+			}
+			50% {
+				transform: translate(-50%, -60%);
+			}
+			100% {
+				transform: translate(-50%, -50%);
+			}
+		}
+		.rainy:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 25%;
+			width: 4px;
+			height: 14px;
+			background: #fff;
+			border-radius: 2px;
+			box-shadow: #fff 25px -10px 0, #fff 50px 0 0, #fff 75px -10px 0, #fff 0 25px 0, #fff 25px 15px 0,
+				#fff 50px 25px 0, #fff 75px 15px 0, #fff 0 50px 0, #fff 25px 40px 0, #fff 50px 50px 0, #fff 75px 40px 0;
+			animation: rainDrop 2s linear infinite;
+		}
+		@keyframes rainDrop {
+			0% {
+				transform: translate(0, 0) rotate(10deg);
+			}
+			100% {
+				transform: translate(-4px, 24px) rotate(10deg);
+				box-shadow: #fff 25px -10px 0, #fff 50px 0 0, #fff 75px -10px 0, #fff 0 25px 0, #fff 25px 15px 0,
+					#fff 50px 25px 0, #fff 75px 15px 0, rgba(255, 255, 255, 0) 0 50px 0,
+					rgba(255, 255, 255, 0) 25px 40px 0, rgba(255, 255, 255, 0) 50px 50px 0,
+					rgba(255, 255, 255, 0) 75px 40px 0;
+			}
+		}
+		.snowy:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 25%;
+			width: 8px;
+			height: 8px;
+			background: #fff;
+			border-radius: 50%;
+			box-shadow: #fff 25px -10px 0, #fff 50px 0 0, #fff 75px -10px 0, #fff 0 25px 0, #fff 25px 15px 0,
+				#fff 50px 25px 0, #fff 75px 15px 0, #fff 0 50px 0, #fff 25px 40px 0, #fff 50px 50px 0, #fff 75px 40px 0;
+			animation: snowDrop 2s linear infinite;
+		}
+		@keyframes snowDrop {
+			0% {
+				transform: translateY(0);
+			}
+			100% {
+				transform: translateY(25px);
+				box-shadow: #fff 25px -10px 0, #fff 50px 0 0, #fff 75px -10px 0, #fff 0 25px 0, #fff 25px 15px 0,
+					#fff 50px 25px 0, #fff 75px 15px 0, rgba(255, 255, 255, 0) 0 50px 0,
+					rgba(255, 255, 255, 0) 25px 40px 0, rgba(255, 255, 255, 0) 50px 50px 0,
+					rgba(255, 255, 255, 0) 75px 40px 0;
+			}
+		}
+	</style>
+</html>
